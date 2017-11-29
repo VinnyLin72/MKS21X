@@ -23,19 +23,19 @@ public class Book{
 	return ISBN;
     }
 
-    public void setAuthor(String new){
-	author = new;
+    public void setAuthor(String n){
+	author = n;
     }
 
-    public void setTitle(String new){
-	title = new;
+    public void setTitle(String n){
+	title = n;
     }
 
-    public void setISBN(int new){
-	ISBN = new;
+    public void setISBN(int n){
+	ISBN = n;
     }
 
     public String toString(){
-	return title + ", " + author + ", " + ISBN;
+	return getTitle() + ", " + getAuthor() + ", " + getISBN();
     }
 }
