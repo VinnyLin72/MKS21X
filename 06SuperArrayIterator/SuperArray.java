@@ -1,9 +1,9 @@
 public class SuperArray{
     private String[] data;
     private int size;
-    public SuperArray(String[] stuff){
-        size = stuff.length;
-        data = stuff;
+    public SuperArray(){
+	data = new String[0];
+        size = 0;
     }
     public void clear(){
 	data = new String[size];
