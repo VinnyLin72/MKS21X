@@ -1,8 +1,0 @@
-public class Driver{
-    public static void main (String[]args){
-	Barcode x = new Barcode(12345);
-	System.out.println(toCode("12435"));
-	System.out.println(x.toString());
-	System.out.println(x.getCode());
-    }
-}
