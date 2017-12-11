@@ -2,7 +2,7 @@ import java.util.Arrays;
 public class Sorts{                                                                 
                                                                                     
     public static String name(){                                                    
-	return "10.Chen.Mohammad";                                                  
+	return "10.Lin.Vincent";                                                  
     }                                                                               
                                                                                     
     public static boolean isSorted(int[]ary){                                       
@@ -57,5 +57,15 @@ public class Sorts{
 	    }
 	    data[index] = temp;
 	}
-    }            
+    }
+    
+    public static void bubbleSort(int[] data){
+      	for (int sorted = data.length; sorted > 0; sorted --){
+	    for ( int i = 1; i < sorted; i ++){
+		if (data[i] < data[i - 1]){
+		    swap(data, i, i -1);
+		}
+	    }
+      	}
+    }
 }
