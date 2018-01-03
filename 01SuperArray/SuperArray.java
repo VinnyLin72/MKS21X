@@ -1,16 +1,20 @@
 public class SuperArray{
     private String[] data;
     private int size;
+
     public SuperArray(){
-	data = new String[0];
+	data = new String[10];
         size = 0;
     }
+
     public void clear(){
 	data = new String[size];
     }
+
     public int size(){
         return this.size;
     }
+
     public boolean add(String thing){
         resize();
         data[size-1] = thing;
