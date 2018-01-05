@@ -42,8 +42,8 @@ public class Barcode implements Comparable<Barcode>{
 	    int zipsum = 0;
 	    String newBar = "";
 	    for (int i = 0; i < zip.length(); i ++){
-		newBar += nums[(zip.charAt(i) - 48)];
-		zipsum += (zip.charAt(i)) - 48;
+		newBar += nums[Integer.parseInt((zip.charAt(i)))];
+		zipsum += (Integer.parseInt(zip.charAt(i)));
 	    }
 	    newBar = "|" + newBar + nums[zipsum % 10] + "|";
 	    return newBar;
@@ -78,7 +78,7 @@ public class Barcode implements Comparable<Barcode>{
 	if (codenums.length() != 6) throw new IllegalArgumentException();
 	int sumcode = 0;
 	for (int i = 0; i < 5; i ++){
-	    sumcode += (codenums.charAt(i)) - 48;
+	    sumcode += Integer.parseInt((codenums.charAt(i)));
 	}
 	if (sumcode % 10 != -48 + codenums.charAt(codenums.length() - 1)) throw new IllegalArgumentException();
 	return codenums.substring(0, codenums.length() - 1);
