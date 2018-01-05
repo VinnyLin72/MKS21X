@@ -1,24 +1,30 @@
 public class OrderedSuperArray extends SuperArray{
+    
     public OrderedSuperArray(){
 	super();
     }
+    
     public OrderedSuperArray(int startcap){
 	super(startcap);
     }
+    
     public OrderedSuperArray(String[] ary){
 	super(ary.length);
 	for (int i = 0; i < ary.length; i ++){
 	    add(ary[i]);
 	}
     }
+    
     public void add(int index, String thing){
-	super.add(thing);
+	add(thing);
     }
     public String set(int index, String thing){
 	throw new UnsupportedOperationException();
     }
     public boolean add(String thing){
-	super.add();
+	int i = indexOfBinary(thing);
+	super.add(i, thing);
+	return true;
     }
 
     public int indexOfBinary(String element){
